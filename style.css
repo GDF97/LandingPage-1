@@ -1,0 +1,217 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(40, 39, 39, 0.149);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+#header button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(248, 248, 248, 0.16);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#header button:hover{
+    transition: .5s;
+    color: rgb(231, 239, 5);
+}
+
+#header button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(41, 42, 40, 0.467);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+#header button:hover:before{
+    width: 100%;
+}
+
+#logo{
+    position: relative; 
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    transition: .5s;
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.menu a {
+    position: relative;
+    color : white;
+    font-size: 1.1em;
+    letter-spacing: .15rem;
+    font-weight: 500;
+    transition: .5s;
+}
+
+#logo:hover{
+    color: rgb(231, 239, 5);
+}
+.menu a:is(:hover, :active){
+    color: rgb(231, 239, 5);
+}
+
+.menu a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(231, 239, 5);
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    transition: .2s;
+}
+
+.menu a:hover::before{
+    width: 100%;
+}
+
+
+#home-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/nature1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+
+.left h1{
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgb(170, 244, 186);
+    line-height: 8rem;
+}
+
+.left h3{
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(231, 246, 231);
+}
+
+.calendar{
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    padding: 0rem 1rem;
+    align-items: center;
+    color: white;
+    border: 1px solid rgb(200, 239, 5);
+    background-color: rgba(0, 0, 0, 0.376);
+}
+
+
+.home-content button{
+    color: white;
+    font-size: 3rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    border: 5px solid rgb(200, 239, 5);
+    margin-left: 15rem;
+    background-color: rgba(0, 0, 0, 0.376);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-content button:hover{
+    transform: scale(1.1);
+}
+
+
+
+.btn-mobile{
+    position: relative;
+    width: 50px;
+    height: 3px;
+    background-color: black;
+    display: none;
+    cursor: pointer;
+}
+
+.rodape{
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.478);
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+
+
+
+
+/**Animations**/
