@@ -7,40 +7,58 @@
     <title>Nature</title>
 
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
     <header id="header">
         <a href="#" id="logo">Logo</a>
-        <nav>
-            <ul class="menu">
+
+
+
+        <nav id="nav" class="active">       
+            
+            <button id="btn-mobile" onclick="toggleMenu()">
+                <span id="hamb"></span>
+            </button>
+
+            <ul id="menu">
                 <li><a href="#home-section"">Home</a></li>
                 <li><a href="#">Timeline</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About</a></li>
+                <button class="SignUpNav">Sign Up</button>
             </ul>
         </nav>
-        <button>Sign Up</button>
+        <button class="SignUp">Sign Up</button>
     </header>
     <section id="home-section">
         <div class="home-content">
             <div class="left">
-                <div class="calendar">13 March 2023 - 27 May 2023</div>
+                <div class="calendar"><i class='bx bxs-calendar' ></i>13 March 2023 - 27 May 2023</div>
                 <h1>Nevada, California</h1> 
                 <h3> Explore Yosemite.</h3>                     
             </div>
-            <button>
+            <button id="btn1">
                  Let's
                   <br> 
                   Go &rarr;
-                </button>      
+            </button>      
+
+            <button id="btn2">
+                Explore
+            </button>
         </div>
         <footer class="rodape">
             <div class="text">
-
+                <p>Get to now about Nevada, California nature expedition and get ready for the trips.</p>
+                <hr>
+                <p>Primary focus of our mission is documenting the widlelife of Nevada, California.</p>
             </div>
             <div class="icons">
-                
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+                <a href=""><i class='bx bxl-youtube' ></i></a>
             </div>
         </footer>
     </section>
