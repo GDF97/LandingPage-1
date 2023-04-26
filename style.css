@@ -28,9 +28,54 @@ a{
     align-items: center;
 }
 
+#btn-mobile{
+    display: none;
+}
 
+.SignUpNav{
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    background-color: rgba(248, 248, 248, 0.16);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-#header button{
+.SignUpNav:hover{
+    transition: .5s;
+    color: rgb(231, 239, 5);
+}
+
+.SignUpNav::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(41, 42, 40, 0.467);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.SignUpNav:hover:before{
+    width: 100%;
+}
+
+#header .SignUp{
     position: relative;
     display: flex;
     justify-content: center;
@@ -50,12 +95,12 @@ a{
     overflow: hidden;
 }
 
-#header button:hover{
+#header .SignUp:hover{
     transition: .5s;
     color: rgb(231, 239, 5);
 }
 
-#header button::before{
+#header .SignUp::before{
     content: "";
     position: absolute;
     top: 0;
@@ -69,7 +114,7 @@ a{
     transition: .5s;
 }
 
-#header button:hover:before{
+#header .SignUp:hover:before{
     width: 100%;
 }
 
@@ -82,13 +127,13 @@ a{
 }
 
 
-.menu{
+#menu{
     display: flex;
     align-items: center;
     gap: 4rem;
 }
 
-.menu a {
+#menu a {
     position: relative;
     color : white;
     font-size: 1.1em;
@@ -100,11 +145,11 @@ a{
 #logo:hover{
     color: rgb(231, 239, 5);
 }
-.menu a:is(:hover, :active){
+#menu a:is(:hover, :active){
     color: rgb(231, 239, 5);
 }
 
-.menu a::before{
+#menu a::before{
     content: "";
     position: absolute;
     width: 0;
@@ -116,7 +161,7 @@ a{
     transition: .2s;
 }
 
-.menu a:hover::before{
+#menu a:hover::before{
     width: 100%;
 }
 
@@ -134,8 +179,13 @@ a{
 }
 
 .home-content{
+    width: 90%;
     display: flex;
     align-items: center;
+}
+
+.left > :where(h1, h3){
+    text-shadow: 0 0 30px black;
 }
 
 
@@ -156,6 +206,7 @@ a{
     width: fit-content;
     height: 40px;
     display: flex;
+    gap: .5rem;
     padding: 0rem 1rem;
     align-items: center;
     color: white;
@@ -164,7 +215,7 @@ a{
 }
 
 
-.home-content button{
+.home-content #btn1{
     color: white;
     font-size: 3rem;
     width: 200px;
@@ -181,7 +232,12 @@ a{
     transition: .5s;
 }
 
-.home-content button:hover{
+.home-content #btn2{
+    display: none;
+}
+
+.home-content > :where( #btn1, #btn2):hover{
+    cursor: pointer;
     transform: scale(1.1);
 }
 
@@ -202,15 +258,204 @@ a{
     height: 200px;
     background-color: rgba(0, 0, 0, 0.478);
     width: 100%;
+    display: flex;
     color: white;
+    justify-content: space-between;
+}
+
+.rodape > .text{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    text-align: justify;
+}
+
+.rodape > .text > p{
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.rodape > .icons{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem 3rem;
+    gap: 1rem;
+}
+
+.rodape > .icons > a{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    border-radius: 20px;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    font-size: 1.3rem;
+    color: white;
+    transition: .5s;
+}
+
+.rodape > .icons > a:hover{
+    transform: translateX(-5px);
+}
+
+/**Responsividade**/
+
+@media (max-width: 1400px) {
+    .home-content > #btn1{
+        font-size: 1.3rem;
+        border-radius: 50px;
+        height: 100px;
+        width: 300px;
+        border: 3px solid rgb(200, 239, 5);
+    }
+}
+
+@media (max-width: 1030px) {
+    
+    .left{
+        width: fit-content;
+    }
+
+    .left h1{
+        font-size: 6rem;
+    }
+
+    .left h3{
+        font-size: 2rem;
+    }
 }
 
 
+@media (max-width: 900px){
+
+    .SignUpNav{
+        display: flex;
+    }
+
+      #menu{
+        position: absolute;
+        width: 45%;
+        top: 70px;
+        right: 0px;
+        display: block;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+        background-color: rgba(41, 41, 41, 0.574);
+        backdrop-filter: blur(20px);
+    }
 
 
+      #header .SignUp{
+        display: none;
+      }
 
+      #menu > *{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5em;
+        color: white;
+      }
+
+      #hamb{
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamb::after, #hamb::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        
+    }
+    #nav.active #menu{
+        visibility: visible;
+        height: 40vh;
+        overflow-y: auto;
+    }   
+    #nav.active #hamb{
+        border-top-color: transparent;
+    }
+    #nav.active #hamb::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamb::after{
+        transform: rotate(-135deg);
+        top: -7px;
+        
+    }
+}
+
+@media (max-width: 800px) {
+    .home-content  > #btn1{
+        display: none;
+    }
+    .home-content > #btn2{
+        z-index: -1;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid rgb(200, 239, 5);
+        background-color: rgba(0, 0, 0, 0.376);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 10px;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 700px){
+    
+    .calendar{
+        font-size: .8rem;
+    }
+
+    .left h1{
+        font-size: 3rem;
+        line-height: 3.4rem;
+    }
+
+    .left h3{
+        font-size: 1.3rem;
+    }
+    
+    .rodape{
+        height: 170px;
+    }
+
+    .rodape > .text > p{
+        gap: 1rem;
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .rodape > .icons{
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
 
 /**Animations**/
