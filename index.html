@@ -13,9 +13,6 @@
 
     <header id="header">
         <a href="#" id="logo">Logo</a>
-
-
-
         <nav id="nav">       
             
             <button id="btn-mobile" onclick="toggleMenu()">
@@ -24,7 +21,7 @@
 
             <ul id="menu">
                 <li><a href="#home-section"">Home</a></li>
-                <li><a href="#">Timeline</a></li>
+                <li><a href="#timeline-section">Timeline</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About</a></li>
                 <button class="SignUpNav">Sign Up</button>
@@ -32,6 +29,7 @@
         </nav>
         <button class="SignUp">Sign Up</button>
     </header>
+
     <section id="home-section">
         <div class="home-content">
             <div class="left">
@@ -61,6 +59,77 @@
                 <a href=""><i class='bx bxl-youtube' ></i></a>
             </div>
         </footer>
+    </section>
+
+    <section class="timeline-section" id="timeline-section">
+        <div class="timeline-content">
+            <div class="listbuttons">
+                <button id="btnMountain"> <span>01.</span>Mountain</button>
+                <hr>
+                <button id="btnRiver"> <span>02.</span>River</button>
+                <hr>
+                <button id="btnFauna"> <span>03.</span>Fauna</button>
+                <hr>
+            </div>
+            <div class="modalInfo">
+                <div class="modal-body">
+                    <div class="modal-navbar">
+                        <ul>
+                            <li><button id="btnOverview">Overview</button></li>
+                            <hr>
+                            <li><button id="btnGallery">Gallery</button></li>
+                            <hr>
+                            <li><button id="btnMaps">Maps</button></li>
+                        </ul>
+                    </div>
+                    <div class="modal-content active" id="mountain">
+                        <div class="modal-text active" id="overviewMountain">
+                            <h2>Things you should know about Yosemite Mountain</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="galleryMountain">
+                            <h2>Yosemite Gallery Mountain</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="mapsMountain">
+                            <h2>Yosemite Map</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                    </div>
+
+                    <div class="modal-content inactive" id="river">
+                        <div class="modal-text active" id="overviewRiver">
+                            <h2>Things you should know about Yosemite River</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="galleryRiver">
+                            <h2>Yosemite Gallery River</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="mapsRiver">
+                            <h2>Yosemite Map</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                    </div>
+
+                    <div class="modal-content inactive" id="fauna">
+                        <div class="modal-text active" id="overviewFauna">
+                            <h2>Things you should know about Yosemite Fauna</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="galleryFauna">
+                            <h2>Yosemite Gallery Fauna</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                        <div class="modal-text inactive" id="mapsFauna">
+                            <h2>Yosemite Map</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, minus quas! Ex animi, quasi tenetur reprehenderit temporibus error quibusdam distinctio.</h3>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     </section>
     
     <script src="script.js"></script>
