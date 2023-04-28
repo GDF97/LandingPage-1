@@ -9,7 +9,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-ul,li{
+html,body{
+    overflow-x: hidden;
+}
+
+ul, li{
     list-style: none;
 }
 
@@ -17,8 +21,10 @@ a{
     text-decoration: none;
 }
 
+/**NAVBAR**/
+
 #header{
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 70px;
     background-color: rgba(40, 39, 39, 0.149);
@@ -39,7 +45,7 @@ a{
     align-items: center;
     width: 120px;
     height: 40px;
-    background-color: rgba(248, 248, 248, 0.16);
+    background-color: rgb(20 20 20 / 31%);
     color: white;
     outline: none;
     border: none;
@@ -48,7 +54,6 @@ a{
     letter-spacing: .1rem;
     z-index: 2;
     cursor: pointer;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -82,7 +87,7 @@ a{
     align-items: center;
     width: 120px;
     height: 40px;
-    background-color: rgba(248, 248, 248, 0.16);
+    background-color: rgb(20 20 20 / 31%);
     color: white;
     outline: none;
     border: none;
@@ -91,7 +96,6 @@ a{
     letter-spacing: .1rem;
     z-index: 2;
     cursor: pointer;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -165,6 +169,7 @@ a{
     width: 100%;
 }
 
+/**Primeira Tela**/
 
 #home-section{
     width: 100%;
@@ -252,6 +257,8 @@ a{
     cursor: pointer;
 }
 
+/**Rodapé Primeira Pagina**/
+
 .rodape{
     position: absolute;
     bottom: 0;
@@ -300,6 +307,148 @@ a{
 .rodape > .icons > a:hover{
     transform: translateX(-5px);
 }
+/**Fim da Primeira Tela**/
+
+
+
+/**Segunda Tela**/
+
+.timeline-section{
+    width: 100%;
+    height: 100vh;
+    background: rgb(35,60,35);
+    background: linear-gradient(30deg, rgba(35,60,35,1) 0%, rgba(62,82,62,1) 40%, rgba(156,158,157,1) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.timeline-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.listbuttons{
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.listbuttons > button{
+    color: rgb(178, 178, 178);
+    width: 100%;
+    height: 10rem;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: last baseline;
+    font-size: 4rem;
+    font-weight: 600;
+    gap: 1rem;
+    transition: .5s;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.listbuttons > button > span{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.listbuttons > button:is(:hover){
+    color: white;
+    font-size: 5rem;
+    transform: translate(50px, -10px);
+}
+
+.modalInfo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modal-body{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.modal-navbar{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(251, 251, 251, 0.467);
+    display: flex;
+    align-items: center;
+}
+
+.modal-navbar > ul{
+    display: flex;
+    padding-left: 3rem;
+    gap: 2rem;
+}
+
+.modal-navbar > ul > li > button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    color: rgba(238, 238, 238, 0.686);
+    letter-spacing: .2rem;
+    cursor: pointer;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-navbar > ul > li > button:is(:hover, :active){
+    color: white;
+    transform: translate(10px, -5px);
+}
+
+.modal-content{
+    padding: 3rem;
+    height: calc(100% - 80px);
+    color: white;
+    flex-direction: column;
+    display: flex;
+    background-color: #ffffff1c;
+}
+
+.modal-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+
+.modal-text > h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.modal-text > h3{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.active{
+    display: flex;
+}
+
+.inactive{
+    display: none;
+}
+
+
+/**Fim da Segunda Tela**/
+
+
 
 /**Responsividade**/
 
@@ -325,6 +474,26 @@ a{
 
     .left h3{
         font-size: 2rem;
+    }
+
+    .timeline-content{
+        flex-direction: column;
+    }
+
+    .listbuttons{
+        flex-direction: row;
+        margin-top: 6rem;
+        width: auto;
+
+    }
+
+    .listbuttons > button{
+        font-size: 2rem;
+        height: auto;
+    }
+
+    .modalInfo{
+        width: 90%;
     }
 }
 
@@ -404,6 +573,28 @@ a{
         top: -7px;
         
     }
+
+    .listbuttons{
+        gap: .2rem;
+    }
+
+    .listbuttons > hr{
+        height: 20px;
+        align-self: center;
+    }
+
+    .listbuttons > button > span,
+    .listbuttons > button{
+        font-size: 2rem;
+    }
+
+    .listbuttons > button:is(:hover){
+        color: white;
+        font-size: 1rem;
+        transform: none;
+    }
+
+    
 }
 
 @media (max-width: 800px) {
@@ -455,6 +646,56 @@ a{
         gap: 1rem;
         padding: 1rem;
     }
+
+    .timeline-content, .timeline-section{
+        height: 100%;
+    }
+
+    .timeline-content{
+        gap: 1rem;
+    }
+
+    
+    .listbuttons{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .listbuttons > hr{
+        height: auto;
+        width: 100%;
+    }
+
+    .modal-navbar > ul{
+        padding-left: 1rem;
+        gap: .5rem;
+    }
 }
 
-/**Animations**/
+@media(max-width: 380px){
+    .listbuttons{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .listbuttons > hr{
+        height: auto;
+        width: 100%;
+    }
+
+    .modalInfo{
+        height: fit-content;
+    }
+
+    .modal-body{
+        height: 100%;
+    }
+    .modal-content{
+        padding: 2rem;
+    }
+
+    .modal-navbar > ul > li > button {
+        font-size: 1rem;
+    }
+
+}
