@@ -9,10 +9,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-html,body{
-    overflow-x: hidden;
-}
-
 ul, li{
     list-style: none;
 }
@@ -634,6 +630,7 @@ a{
     
     .rodape{
         height: 170px;
+        bottom: 0;
     }
 
     .rodape > .text > p{
@@ -671,6 +668,63 @@ a{
         gap: .5rem;
     }
 }
+
+@media (max-height: 600px){
+    
+    .calendar{
+        font-size: .8rem;
+    }
+
+    .left h1{
+        font-size: 3rem;
+        line-height: 3.4rem;
+    }
+
+    .left h3{
+        font-size: 1.3rem;
+    }
+    
+    .rodape{
+        height: 170px;
+        bottom: 0;
+    }
+
+    .rodape > .text > p{
+        gap: 1rem;
+        padding: 1rem;
+        font-size: .8rem;
+    }
+
+    .rodape > .icons{
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .timeline-content, .timeline-section{
+        height: 100%;
+    }
+
+    .timeline-content{
+        gap: 1rem;
+    }
+
+    
+    .listbuttons{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .listbuttons > hr{
+        height: auto;
+        width: 100%;
+    }
+
+    .modal-navbar > ul{
+        padding-left: 1rem;
+        gap: .5rem;
+    }
+}
+
 
 @media(max-width: 380px){
     .listbuttons{
